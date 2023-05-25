@@ -75,5 +75,41 @@
                 </tr>
             </tbody>
         </table>
+
+        <h1>Registraion Form</h1>
+        <form action="registraion URL">
+            <fieldset>
+                <legend>Account</legend>
+                <label for="name">이름</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="email">이메일</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" name="password" required>
+            </fieldset>
+            <fieldset>
+                <legend>User Info</legend>
+                <label for="location">주소</label>
+                <select name="location" id="location">
+                    <option value="MA">MA</option>
+                    <option value="NY">NY</option>
+                    <option value="CA">CA</option>
+                </select>
+                <br>
+                <h4>성별</h4>
+                <label for="gender1">남성</label>
+                <input type="radio" name="gender" id="gender1" value="Male">
+                <label for="gender2">여성</label>
+                <input type="radio" name="gender" id="gender2" value="Female">
+                <br>
+                <label for="gender3">남성</label>
+                <input type="checkbox" name="gender" id="gender3" value="Male">
+                <label for="gender4">여성</label>
+                <input type="checkbox" name="gender" id="gender4" value="Female">
+            </fieldset>
+            <input type="submit" value="등록">
+        </form>
     </body>
 </html>
