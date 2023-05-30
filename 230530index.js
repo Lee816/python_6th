@@ -1,3 +1,13 @@
+var name = "이승훈";
+var age = 29;
+var cgpa = 3.92;
+var lineBreak = "<br/>";
+
+document.write("이름 : " + name + lineBreak);
+document.write("나이 : " + age + lineBreak);
+document.write("학점 : " + cgpa + lineBreak);
+
+
 console.log(123, typeof 123);
 console.log(123.5, typeof 123.5);
 console.log('123', typeof '123');
