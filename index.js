@@ -1,7 +1,30 @@
-var cels = parseFloat(prompt("섭씨 입력 : "));
-var farn = cels * (9/5)+32;
+var num1 = 20;
+var num2 = 10;
+var num3 = "10";
+var num4 = 20;
+var num5 = 15;
 
-document.write("화씨 : "+farn);
+console.log("일반 크기비교");
+console.log(num1>num2,num1,'>',num2);
+console.log(num1>=num2,num1,'>=',num2);
+console.log(num1<num2,num1,'<',num2);
+console.log(num1<=num2,num1,'<=',num2);
+console.log("같은지 여부 확인");
+console.log(num1==num4,num1,'==',num4);
+console.log(num1!=num4,num1,'!=',num4);
+console.log("타입도 포함해 같은지 여부 확인");
+console.log(num1===num3,num1,'===',num4);
+console.log(num2===num3,num1,'===',num4);
+console.log(num2==num3,num1,'==',num4);
+console.log("&& , ||");
+console.log('num1>num2 && num1 < num5',num1>num2 && num1 < num5);
+console.log('num1>num2 && !(num1 < num5)',num1>num2 && !(num1 < num5));
+console.log('num1>num2 || num1 < num5',num1>num2 || num1 < num5);
+
+// var cels = parseFloat(prompt("섭씨 입력 : "));
+// var farn = cels * (9/5)+32;
+
+// document.write("화씨 : "+farn);
 
 // var base = parseInt(prompt("밑변 입력 : "));
 // var height = parseInt(prompt("높이 입력 : "));
