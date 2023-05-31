@@ -1,16 +1,38 @@
-for (var i =1 ; i<= 100 ; i++){
-    if(i ==20){
-        break;
-    }
-    document.write(i + "<br/>");
+function message(){
+    document.write("Hello, I am a function without parameter"+"<br/>");
 }
-document.write("===========<br/>");
-for (var k =1 ; k<= 100 ; k++){
-    if(k ==20){
-        continue;
-    }
-    document.write(k + "<br/>");
+
+function welcomMessage(name){
+    document.write("welcom " + name + "<br/>");
 }
+
+function addition(num1, num2){
+    var sum = num1 + num2;
+    document.write("addition is " +sum + "<br/>");
+}
+
+function square(num){
+    return num*num;
+}
+
+message();
+welcomMessage("홍길동");
+addition(2,3);
+document.write("square if 5 is "+square(5)+"<br/>");
+
+// for (var i =1 ; i<= 100 ; i++){
+//     if(i ==20){
+//         break;
+//     }
+//     document.write(i + "<br/>");
+// }
+// document.write("===========<br/>");
+// for (var k =1 ; k<= 100 ; k++){
+//     if(k ==20){
+//         continue;
+//     }
+//     document.write(k + "<br/>");
+// }
 
 // var i = 1;
 // do{
