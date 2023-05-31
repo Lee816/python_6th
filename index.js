@@ -1,16 +1,37 @@
-(function display(message){
-    console.log(message);
-})("Hi");
+var names = new Array(20);
 
-var display2 = function displayMessage(msg){
-    console.log(msg);
-}
+names[0] = "지훈";
+names[1] = "은영";
+console.log(names[1]);
 
-display2("I am message");
+var students = ['지훈','은영','수진','준호'];
+console.log("students = " + students);
+console.log("2번 인덱스의 학생 : "+students[2]);
+console.log("학생 배열의 길이 : "+students.length);
+students.push("길동");
+console.log("push 후 학생 배열 : "+students);
+students.pop();
+console.log("pop(마지막 요소 제거) 후 학생 배열 : "+ students);
 
-(function addNumbers(a,b){
-    console.log(a+b);
-})(3,4);
+var numArray1 = [10,20];
+var numArray2 = [30,40,50,60];
+var numArray = numArray1.concat(numArray2);
+console.log("배열 합치기(concatenation) : "+numArray);
+console.log(numArray1+numArray2);
+
+// (function display(message){
+//     console.log(message);
+// })("Hi");
+
+// var display2 = function displayMessage(msg){
+//     console.log(msg);
+// }
+
+// display2("I am message");
+
+// (function addNumbers(a,b){
+//     console.log(a+b);
+// })(3,4);
 
 // function message(){
 //     document.write("Hello, I am a function without parameter"+"<br/>");
