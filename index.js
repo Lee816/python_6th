@@ -11,7 +11,8 @@ console.log("학생 배열의 길이 : "+students.length);
 students.push("길동");
 console.log("push 후 학생 배열 : "+students);
 students.pop();
-console.log("pop(마지막 요소 제거) 후 학생 배열 : "+ students);
+console.log(element)
+console.log("pop(마지막 요소를 뱉어냄) 후 학생 배열 : "+ students);
 
 var numArray1 = [10,20];
 var numArray2 = [30,40,50,60];
