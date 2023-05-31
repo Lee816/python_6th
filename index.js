@@ -1,39 +1,49 @@
-var digit = parseInt(prompt("숫자입력 : "));
-switch(digit){
-    case 0:
-        document.write("Zero");
-        break;
-    case 1:
-        document.write("One");
-        break;
-    case 2:
-        document.write("Two");
-        break;
-    case 3:
-        document.write("Three");
-        break;
-    case 4:
-        document.write("Four");
-        break;
-    case 5:
-        document.write("Five");
-        break;
-    case 6:
-        document.write("Six");
-        break;
-    case 7:
-        document.write("Seven");
-        break;
-    case 8:
-        document.write("Eight");
-        break;
-    case 9:
-        document.write("Nine");
-        break;
-    default:
-        document.write("Not a digit");
-        break;
+var i = 1;
+do{
+    document.write("멋쟁이사자i : "+ i++ +"<br/>");
+} while(i<1)
+document.write("===========<br/>");
+var j = 1;
+while(j <= 10){
+    document.write("멋쟁이사자j : "+ j++ +"<br/>");
 }
+
+// var digit = parseInt(prompt("숫자입력 : "));
+// switch(digit){
+//     case 0:
+//         document.write("Zero");
+//         break;
+//     case 1:
+//         document.write("One");
+//         break;
+//     case 2:
+//         document.write("Two");
+//         break;
+//     case 3:
+//         document.write("Three");
+//         break;
+//     case 4:
+//         document.write("Four");
+//         break;
+//     case 5:
+//         document.write("Five");
+//         break;
+//     case 6:
+//         document.write("Six");
+//         break;
+//     case 7:
+//         document.write("Seven");
+//         break;
+//     case 8:
+//         document.write("Eight");
+//         break;
+//     case 9:
+//         document.write("Nine");
+//         break;
+//     default:
+//         document.write("Not a digit");
+//         break;
+// }
 
 // var letter = prompt("Enter a letter : ");
 // letter = letter.toLowerCase();
