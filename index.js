@@ -1,24 +1,38 @@
-function message(){
-    document.write("Hello, I am a function without parameter"+"<br/>");
+(function display(message){
+    console.log(message);
+})("Hi");
+
+var display2 = function displayMessage(msg){
+    console.log(msg);
 }
 
-function welcomMessage(name){
-    document.write("welcom " + name + "<br/>");
-}
+display2("I am message");
 
-function addition(num1, num2){
-    var sum = num1 + num2;
-    document.write("addition is " +sum + "<br/>");
-}
+(function addNumbers(a,b){
+    console.log(a+b);
+})(3,4);
 
-function square(num){
-    return num*num;
-}
+// function message(){
+//     document.write("Hello, I am a function without parameter"+"<br/>");
+// }
 
-message();
-welcomMessage("홍길동");
-addition(2,3);
-document.write("square if 5 is "+square(5)+"<br/>");
+// function welcomMessage(name){
+//     document.write("welcom " + name + "<br/>");
+// }
+
+// function addition(num1, num2){
+//     var sum = num1 + num2;
+//     document.write("addition is " +sum + "<br/>");
+// }
+
+// function square(num){
+//     return num*num;
+// }
+
+// message();
+// welcomMessage("홍길동");
+// addition(2,3);
+// document.write("square if 5 is "+square(5)+"<br/>");
 
 // for (var i =1 ; i<= 100 ; i++){
 //     if(i ==20){
