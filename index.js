@@ -1,8 +1,13 @@
-var base = parseInt(prompt("밑변 입력 : "));
-var height = parseInt(prompt("높이 입력 : "));
-var area = base*height*0.5;
+var cels = parseFloat(prompt("섭씨 입력 : "));
+var farn = cels * (9/5)+32;
 
-document.write("삼각형의 넓이 : " + area );
+document.write("화씨 : "+farn);
+
+// var base = parseInt(prompt("밑변 입력 : "));
+// var height = parseInt(prompt("높이 입력 : "));
+// var area = base*height*0.5;
+
+// document.write("삼각형의 넓이 : " + area );
 
 // var num1 = parseInt(prompt("Enter first number : "));
 // var num2 = parseInt(prompt("Enter second number : "));
