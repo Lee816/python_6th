@@ -25,7 +25,6 @@ function text(){
 document.getElementById("addcontent").innerHTML = localStorage.getItem('maintain')
 
 function addTodo(){
-    var contentlist = document.getElementById('contentlist'); 
     var content = localStorage.getItem('maintain');
     var index = localStorage.getItem('index'); 
     var data = JSON.parse(localStorage.getItem("data")); 
@@ -45,10 +44,12 @@ function addTodo(){
 }
 
 function doneTodo(){
-    if (Object.values(event.currentTarget.parentNode.children[1].classList).includes('done')){
-        event.currentTarget.parentNode.children[1].classList.remove('done');
+    var contentClassList = event.currentTarget.parentNode.children[1].classList;
+
+    if (Object.values(contentClassList).includes('done')){
+        contentClassList.remove('done');
     } else {
-        event.currentTarget.parentNode.children[1].classList.add('done');
+        contentClassList.add('done');
     }
 }
 
