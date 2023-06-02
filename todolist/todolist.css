@@ -53,10 +53,6 @@ li{
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.donedate{
-    flex-grow: 1;
-    margin: auto;
-}
 .contentbox button:nth-of-type(1){
     margin-right: 5px;
 }
