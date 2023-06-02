@@ -24,10 +24,10 @@
 )();
 // 입력창 내용 유지
 function text(){
-    var newContent = document.getElementById("addcontent").innerHTML;
+    var newContent = document.getElementById("addcontent").value;
     localStorage.setItem('maintain',newContent);
 }
-document.getElementById("addcontent").innerHTML = localStorage.getItem('maintain')
+document.getElementById("addcontent").value = localStorage.getItem('maintain')
 
 // 새로운 todo 생성
 function addTodo(){
@@ -41,7 +41,7 @@ function addTodo(){
         // contentbox 자식요소중 제일 앞에 생성
         contentlist.insertAdjacentHTML('afterbegin', newcontentbox); 
 
-        document.getElementById("addcontent").innerHTML = '';
+        document.getElementById("addcontent").value = '';
         data[index] = content;
         index++;
 
@@ -66,7 +66,7 @@ function doneTodo(){
 function delTodo(){
     event.currentTarget.parentNode.remove();
     var data = JSON.parse(localStorage.getItem("data"));
-    console.log(event.currentTarget.parentNode.children[0].innerHTML);
+
     delete data[event.currentTarget.parentNode.children[0].innerHTML];
     localStorage.setItem('data',JSON.stringify(data));
 }

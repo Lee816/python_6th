@@ -11,7 +11,7 @@
 <body>
     <div id="title">Todo List</div>
     <div id="newcontentbox">
-        <div id="addcontent" contenteditable="true" oninput="text()"></div>
+        <input id="addcontent" type="text" placeholder="What are you doing?" oninput="text()" onkeyup="if(window.event.keyCode==13){addTodo()}">
         <button id="addbtn" class="btn btn-primary" onclick="addTodo()">등록</button>
     </div>
     <div class="container mt-4">
