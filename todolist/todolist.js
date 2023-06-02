@@ -1,20 +1,23 @@
 (
     function() {
         if (!(localStorage.getItem('data'))){
-            var data = [];
+            var data = {}; 
+            var index = 1;
             localStorage.setItem('data',JSON.stringify(data));
+            localStorage.setItem('index',index);
         }
         else{
-            var data = JSON.parse(localStorage.getItem("data"));
+            var contentlist = document.getElementById('contentlist'); 
+            var data = Object.values(JSON.parse(localStorage.getItem("data")));
+            
             for(var i=0; i<data.length;i++){
-                var newcontentbox = '<div class="contentbox"><p class="content">'+data[i]+'</p><span class="donedate"></span><button class="btn btn-success" onclick="doneTodo()">완료</button><button class="btn btn-danger" onclick="delTodo()">삭제</button></div>'
+                var newcontentbox = '<div class="contentbox"><span class="d-none">'+index+'</span><p class="content">'+data[i]+'</p><button class="btn btn-success" onclick="doneTodo()">완료</button><button class="btn btn-danger" onclick="delTodo()">삭제</button></div>'
 
-                contentlist.insertAdjacentHTML('beforeend', newcontentbox);
+                contentlist.insertAdjacentHTML('afterbegin', newcontentbox);
             }
         }
     }
 )();
-
 function text(){
     var newContent = document.getElementById("addcontent").innerHTML;
     localStorage.setItem('maintain',newContent);
@@ -22,36 +25,37 @@ function text(){
 document.getElementById("addcontent").innerHTML = localStorage.getItem('maintain')
 
 function addTodo(){
-    var contentlist = document.getElementById('contentlist');
+    var contentlist = document.getElementById('contentlist'); 
     var content = localStorage.getItem('maintain');
-    var data = JSON.parse(localStorage.getItem("data"));
+    var index = localStorage.getItem('index'); 
+    var data = JSON.parse(localStorage.getItem("data")); 
 
-    var newcontentbox = '<div class="contentbox"><p class="content">'+content+'</p><span class="donedate"></span><button class="btn btn-success" onclick="doneTodo()">완료</button><button class="btn btn-danger" onclick="delTodo()">삭제</button></div>'
+    var newcontentbox = '<div class="contentbox"><span class="d-none">'+index+'</span><p class="content">'+content+'</p><button class="btn btn-success" onclick="doneTodo()">완료</button><button class="btn btn-danger" onclick="delTodo()">삭제</button></div>'
 
-    contentlist.insertAdjacentHTML('beforeend', newcontentbox);
-    data.push(content);
-    localStorage.setItem('data',JSON.stringify(data));
+    if (content != '' && content != null){
+        contentlist.insertAdjacentHTML('afterbegin', newcontentbox); 
+
+        data[index] = content;
+        index++;
+        localStorage.setItem('data',JSON.stringify(data)); 
+        localStorage.setItem('index',index);
+        document.getElementById("addcontent").innerHTML = '';
+        localStorage.setItem('maintain','');
+    }
 }
 
 function doneTodo(){
-    var today = new Date();
-    var year = today.getFullYear();
-    var month = ('0' + (today.getMonth() + 1)).slice(-2);
-    var day = ('0' + today.getDate()).slice(-2);
-    var dateString = year + '-' + month  + '-' + day;
-
-    if (Object.values(event.currentTarget.parentNode.children[0].classList).includes('done')){
-        event.currentTarget.parentNode.children[0].classList.remove('done');
-        event.currentTarget.parentNode.children[1].innerHTML = '';
+    if (Object.values(event.currentTarget.parentNode.children[1].classList).includes('done')){
+        event.currentTarget.parentNode.children[1].classList.remove('done');
     } else {
-        event.currentTarget.parentNode.children[0].classList.add('done');
-        event.currentTarget.parentNode.children[1].innerHTML = dateString;
+        event.currentTarget.parentNode.children[1].classList.add('done');
     }
 }
 
 function delTodo(){
     event.currentTarget.parentNode.remove();
     var data = JSON.parse(localStorage.getItem("data"));
-    
-    localStorage.setItem('data',JSON.stringify(data.filter((element) => element != event.currentTarget.parentNode.children[0].innerHTML)));
+
+    delete data[event.currentTarget.parentNode.children[0].innerHTML];
+    localStorage.setItem('data',JSON.stringify(data));
 }
