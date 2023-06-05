@@ -105,3 +105,13 @@ print('st3 : ',st3)
 print('subs in st3 : ',"subs" in st3)
 print('subs not in st3 : ',"subs" not in st3)
 print('wel in st3 : ',"wel" in st3) # 대소문자 구분
+
+# is 연산자
+a = 10
+b = 10
+print('a is b : ',a is b)
+print('a is not b : ',a is not b)
+
+b = '10'
+print('a is b : ',a is b)
+print('a is not b : ',a is not b)
