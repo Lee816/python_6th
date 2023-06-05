@@ -115,3 +115,29 @@ print('a is not b : ',a is not b)
 b = '10'
 print('a is b : ',a is b)
 print('a is not b : ',a is not b)
+
+# 암시적 타입 변환
+a = 5
+b = 2
+print(b, type(b))
+value = a/b
+print(value)
+print(type(value))
+
+x = 10
+y = 5.5
+total = x+y
+print(total)
+print(type(total))
+
+j = "hello"
+k = "likelion"
+p = j+k
+print(p)
+print(type(p))
+
+q = 20
+u = "10"    
+r = q+u
+print(r)
+print(type(r))
