@@ -88,3 +88,20 @@ print('bin(~a) : ',bin(~a))
 print('bin(a&b) : ',bin(a&b))
 print('bin(a<<2) : ',bin(a<<2))
 print('bin(a>>2) : ',bin(a>>2))
+
+# 멤버 in 연산자
+st1 = "Welcome to 멋쟁이 사자"
+print('st1 : ',st1)
+print('to in st1 : ',"to" in st1)
+print('to not in st1 : ',"to" not in st1)
+
+st2 = "Welcome top 멋쟁이 사자"
+print('st2 : ',st2)
+print('to in st2 : ',"to" in st2)
+print('to not in st2 : ',"to" not in st2)
+
+st3 = "Welcome to 멋쟁이 사자"
+print('st3 : ',st3)
+print('subs in st3 : ',"subs" in st3)
+print('subs not in st3 : ',"subs" not in st3)
+print('wel in st3 : ',"wel" in st3) # 대소문자 구분
