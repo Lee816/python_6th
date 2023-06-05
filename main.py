@@ -157,3 +157,21 @@ r = q + int(u)
 print(r,type(r))
 r = str(q) + u
 print(r,type(r))
+
+n1 = 10.36
+vn1 = int(n1)
+print(vn1,type(vn1))
+vn2 = float(vn1)
+print(vn2,type(vn2))
+vn3 = complex(vn1)
+print(vn3,type(vn3))
+
+n5 = "멋쟁이 사자"
+vn5 = list(n5)
+print(vn5,type(vn5))
+vn5 = tuple(n5)
+print(vn5,type(vn5))
+
+n6 = "멋쟁이 사자와 멋쟁이 호랑이"
+vn6 = set(n6)
+print(vn6,type(vn6))
