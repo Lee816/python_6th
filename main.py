@@ -75,3 +75,16 @@ m **= 2
 print('m **= 2 : ',m)
 m //= 10
 print('m //= 10 : ',m)
+
+# 비트 연산자
+a = 10
+b = 15
+print('bin(2진수) : 0b')
+print('hex(16진수) : 0x')
+print('hex(a) : ',bin(a))
+print('bin(b) : ',hex(b))
+print('~a : ',~a)
+print('bin(~a) : ',bin(~a))
+print('bin(a&b) : ',bin(a&b))
+print('bin(a<<2) : ',bin(a<<2))
+print('bin(a>>2) : ',bin(a>>2))
