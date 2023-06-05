@@ -212,3 +212,8 @@ print(mb,type(mb))
 
 price = float(input("Total Price : "))
 print(price)
+
+print("He said, \"Hello World\" ")
+print('He said, "Hello World" ')
+print('It\'s, \"Hello World ')
+print("It's, \"Hello World")
