@@ -180,3 +180,22 @@ print('1')
 print('2',end='')
 print('3')
 print('4')
+
+data = [10, 20, -50, 21.3, 'LikeLion']
+print(data)
+
+print('Like','Share','Subscribe', sep='')
+print('Like','Share','Subscribe', sep='***')
+print('Like','Share','Subscribe', sep='*',end='\t')
+print('Like','Share','Subscribe', sep='**',end='\n')
+
+m = 40
+print("value :", m)
+
+name = "홍길동"
+age = 30
+print("My name is", name, "and My age is", age)
+
+print('Welcome', end='\t')
+print('to',end='\t')
+print('LikeLion')
