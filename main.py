@@ -141,3 +141,11 @@ u = "10"
 r = q+u
 print(r)
 print(type(r))
+
+# 명시적 타입 변환
+a = 5
+b = 2
+value = a / b
+print(type(value))
+int_value = int(value)
+print(type(int_value))
