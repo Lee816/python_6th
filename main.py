@@ -136,11 +136,11 @@ p = j+k
 print(p)
 print(type(p))
 
-q = 20
-u = "10"    
-r = q+u
-print(r)
-print(type(r))
+# q = 20
+# u = "10"    
+# r = q+u
+# print(r)
+# print(type(r))
 
 # 명시적 타입 변환
 a = 5
@@ -149,3 +149,11 @@ value = a / b
 print(type(value))
 int_value = int(value)
 print(type(int_value))
+
+q = 20
+u = '10'
+print(type(u))
+r = q + int(u)
+print(r,type(r))
+r = str(q) + u
+print(r,type(r))
