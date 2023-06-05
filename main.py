@@ -199,3 +199,16 @@ print("My name is", name, "and My age is", age)
 print('Welcome', end='\t')
 print('to',end='\t')
 print('LikeLion')
+
+# name = input('문자입력 : ')
+# print(name)
+# print(input('문자입력 : '))
+
+# name = input('Your Name : ')
+
+mobile = input("Enter Your Mobile Number : ")
+mb = int(mobile)
+print(mb,type(mb))
+
+price = float(input("Total Price : "))
+print(price)
