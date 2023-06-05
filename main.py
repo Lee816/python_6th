@@ -175,3 +175,8 @@ print(vn5,type(vn5))
 n6 = "멋쟁이 사자와 멋쟁이 호랑이"
 vn6 = set(n6)
 print(vn6,type(vn6))
+
+print('1')
+print('2',end='')
+print('3')
+print('4')
