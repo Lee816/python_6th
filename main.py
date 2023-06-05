@@ -62,3 +62,16 @@ print('a>b or a>c : ',a>b or a>c)
 print('a>b or a<c : ',a>b or a<c)
 print('a<b : ',a<b)
 print('not(a<b) : ',not(a<b))
+
+# 할당 연산자
+a = 10
+b = 20
+m = 15
+y = a+b
+print(y)
+m += 10
+print('m += 10 : ',m)
+m **= 2
+print('m **= 2 : ',m)
+m //= 10
+print('m //= 10 : ',m)
