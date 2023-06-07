@@ -364,3 +364,10 @@ for cha in str:
 else: # for문 종료후 실행 break문으로 탈출시 실행 x
     print("Else")
 print("코드종료")
+
+# pass문
+a = 5
+if a < 6:
+    pass
+else:
+    print("6보다 큼")
