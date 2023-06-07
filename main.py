@@ -545,3 +545,31 @@ print(' '.join(spl_s))
 
 print(s.startswith('Hello'))
 print(s.endswith('World'))
+
+print('인자가 없는 함수 정의')
+
+def disp():
+    name = '멋쟁이사자'
+    print('Welcome to',name)
+
+def add():
+    x=10
+    y=20
+    c = x+y
+    print(c)
+
+print('함수 실행')
+disp()
+disp()
+disp()
+
+add()
+
+print('인자가 있는 함수 정의')
+def add(y):
+    x=10.2334
+    print(x+y)
+    print(f'Formatted Ouput {x+y:.2f}')
+
+add(20.1597)
+
