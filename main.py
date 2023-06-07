@@ -368,6 +368,6 @@ print("코드종료")
 # pass문
 a = 5
 if a < 6:
-    pass
+    pass # TODO FIXME 개발내용
 else:
     print("6보다 큼")
