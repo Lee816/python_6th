@@ -409,7 +409,7 @@ while i < n:
     print(stu_roll[i])
     i += 1
 
-print("Array After Insert")
+print("배열 삽입 실습")
 stu_roll.insert(1,106)
 stu_roll.insert(3,107)
 n = len(stu_roll)
@@ -417,3 +417,13 @@ i = 0
 while i < n:
     print(stu_roll[i])
     i += 1
+
+print('배열 요소 삭제')
+stu_roll.remove(101)
+for element in stu_roll:
+    print(element)
+
+print('배열 pop() 함수 실습')
+stu_roll.pop()
+for element in stu_roll:
+    print(element)
