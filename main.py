@@ -356,3 +356,11 @@ print(r[1])
 print(r[2])
 print(r[3])
 print(r[4])
+
+# for in
+str = "멋쟁이 사자"
+for cha in str:
+    print(cha)
+else: # for문 종료후 실행 break문으로 탈출시 실행 x
+    print("Else")
+print("코드종료")
