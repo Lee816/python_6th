@@ -605,3 +605,21 @@ def add(y):
 
 sum4, sub1, a = add(20)
 print(sum4, sub1, a)
+
+def disp():
+    def show():
+        print('Show Function')
+    print('Disp Function')
+    show()
+
+disp()
+
+def disp():
+    def show():
+        # print('Show Function')
+        return 'Show Fuction'
+    # print('Disp Function')
+    result = show() + ' Disp Function'
+    return result
+
+print(disp())
