@@ -444,3 +444,42 @@ print('reverse() 메소드')
 stu_roll.reverse()
 for element in stu_roll:
     print(element)
+
+from array import *
+
+stu_roll = array('i',[101,102,103,104,105,106,107])
+
+print('배열 슬라이싱')
+n = len(stu_roll)
+for i in range(n):
+    print(i,"=",stu_roll[i])
+
+print("1:5")
+a = stu_roll[1:5]
+for a_value in a:
+    print(a_value)
+
+print('0번째 부터 끝까지')
+b = stu_roll[0:]
+for b_value in b:
+    print(b_value)
+
+print('처음부터 5번째 까지')
+c = stu_roll[:5]
+for c_value in c:
+    print(c_value)
+
+print('마지막 요소 4개 출력')
+d = stu_roll[-4:]
+for d_value in d:
+    print(d_value)
+
+print('0부터 6번째 까지 1개 건너뛰어 출력')
+e = stu_roll[0:7:2]
+for e_value in e:
+    print(e_value)
+
+print('마지막 5개 요소 중 [-5-(-3)] = (-2) 오른쪽부터 2개의 요소를 출력')
+f = stu_roll[-5:-3]
+for f_value in f:
+    print(f_value)
