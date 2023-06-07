@@ -529,3 +529,6 @@ print(s.islower()) # 모두 소문자면 True
 print(s.istitle())
 print(s.isdigit()) # 모두 숫자면 True (공백x)
 print(s.isalpha())
+print(s.lstrip())
+print(s.rstrip())
+print(s.strip())
