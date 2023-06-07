@@ -532,3 +532,16 @@ print(s.isalpha())
 print(s.lstrip())
 print(s.rstrip())
 print(s.strip())
+
+s = '     Hello World     '
+print(s.replace('world'.title(),'there'))
+
+s = 'Hello,World'
+print(s.split(','))
+
+spl_s = s.split(',')
+print(spl_s)
+print(' '.join(spl_s))
+
+print(s.startswith('Hello'))
+print(s.endswith('World'))
