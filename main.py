@@ -427,3 +427,20 @@ print('배열 pop() 함수 실습')
 stu_roll.pop()
 for element in stu_roll:
     print(element)
+
+print('array index 메소드')
+print(stu_roll.index(101))
+
+print('extend() 메소드')
+arr = array('i',[201,208,209])
+stu_roll.extend(arr)
+n = len(stu_roll)
+i = 0
+while i < n:
+    print(stu_roll[i])
+    i += 1
+
+print('reverse() 메소드')
+stu_roll.reverse()
+for element in stu_roll:
+    print(element)
