@@ -992,3 +992,12 @@ x = 10
 print('Before Calling :',x,id(x))
 val(x)
 print('After Calling :',x,id(x))
+
+i = 0
+def myfun():
+    global i
+    i += 1
+    print('My Function :',i)
+    myfun()
+
+myfun() # 함수를 부를때마다 콜스택이 쌓임
