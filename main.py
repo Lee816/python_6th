@@ -682,3 +682,35 @@ def add(**num):
     print('Addition : ',z)
 
 add(a=5,b=2,c=4)
+
+
+def show():
+    x = 10
+    print(x)
+
+show()
+
+def add(y):
+    x = 10
+    print(x)
+    print(x+y)
+
+add(20)
+
+a= 50 # global
+def show():
+    x = 10 # local
+    print(x)
+    print(a)
+
+show()
+
+print('Global Varialble a : ',a)
+
+i=0
+def myfuc():
+    a = i + 1
+    print('My Function',a)
+
+myfuc()
+print('Global Varialble a : ',a)
