@@ -879,3 +879,43 @@ print(tuple_h,type(tuple_h))
 
 nested_tuple = ((1,2,3),(4,5,6),(7,8,9))
 print(nested_tuple)
+
+
+a={10,20,30}
+a={10,20,30,'멋쟁이사자','lee',40}
+a={15,20,35,'멋쟁이사자','lee',40,15,20}
+
+b = set()
+print(type(b))
+
+print(a[0]) # 에러 set은 순서가 랜덤이라서 인덱스가 없음
+
+a.add(50)
+a.update([10,20,60,70])
+print(a)
+a.remove('멋쟁이사자') # 찾아서 삭제해주는데 없으면 오류를 발생시킴
+a.discard('멋쟁이사자') # 있으면 삭제하고 없어도 오류를 발생시키지 않음
+print(a)
+
+new_set = a.copy()
+print(new_set)
+new_set.clear()
+print(new_set)
+new_set = a.copy()
+print(new_set)
+
+intersection_a = a.intersection(new_set) # 교집합
+print(intersection_a)
+
+union_a = a.union(new_set) # 합집합
+print(union_a)
+
+difference_a = a.difference(new_set) # 차집합
+print(difference_a)
+
+print(a.issubset(new_set))
+
+print(b.issubset(a)) # 포함되어있는지
+print(b.issuperset(a))
+
+a.symmetric_difference(new_set) # 합집합-교집합
