@@ -919,3 +919,56 @@ print(b.issubset(a)) # 포함되어있는지
 print(b.issuperset(a))
 
 a.symmetric_difference(new_set) # 합집합-교집합
+
+
+stu = {101:'kim', 102:'bae',103:'hong'}
+fees = {'kim':2000,'bae':3000,'hong':8000}
+print(stu[101])
+print(stu[102])
+print(stu[103])
+
+print(fees['kim'])
+print(fees['bae'])
+print(fees['hong'])
+
+stu[102] = 'python'
+print(stu)
+
+stu[104] = '멋쟁이사자'
+print(stu)
+
+del stu[102]
+print(stu)
+
+print(102 not in stu)
+
+new_stu = stu.copy()
+
+new_stu.clear()
+print(new_stu)
+
+key = (101,102,103)
+value = 'a'
+new_stu = dict.fromkeys(key,value)
+print(new_stu)
+
+print(stu[101])
+print(stu.get(101))
+
+print(stu.items())
+print(stu.keys())
+
+stu[104] = '멋쟁이사자'
+print(stu)
+
+stu.update({104:'멋쟁이사자2'})
+print(stu)
+
+stu.pop(104)
+print(stu)
+print(stu.pop(104,'No Value')) # 제거하려는데 없으면 문자열을 출력
+
+stu.setdefault(104, 'park') # 없으면 값을 채워줌
+print(stu)
+
+print(stu.popitem()) # pop한 마지막 값을 반환
