@@ -1001,3 +1001,15 @@ def myfun():
     myfun()
 
 myfun() # 함수를 부를때마다 콜스택이 쌓임
+
+
+show = lambda x : print(x)
+show(5)
+
+add = lambda x,y : (x+y)
+print(add(5,2))
+
+add_sub = lambda x,y : (x+y,x-y)
+a,s = add_sub(5,2)
+print(a)
+print(s)
