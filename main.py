@@ -655,3 +655,25 @@ def show(name, age=20): # 함수인자의 default 값 설정 가능
 show(name='멋쟁이사자',age=20)
 show(age=20,name='멋쟁이사자')
 show(name='멋쟁이사자')
+
+# Example 1
+def add(x,y):
+    z = x + y
+    print("Addition : ",z)
+
+add(5,2)
+
+# Example 2
+def add(*num):
+    z = num[0], + num[1] + num[2]
+    print('Addition * : ',z)
+
+add(5,2,4)
+
+# Example 3
+def add(x,*num):
+    z = x + num[0] + num[1]
+    print('Addition x * : ',z)
+
+add(5,2,4)
+
