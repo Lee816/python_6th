@@ -972,3 +972,13 @@ stu.setdefault(104, 'park') # 없으면 값을 채워줌
 print(stu)
 
 print(stu.popitem()) # pop한 마지막 값을 반환
+
+def val(lst):
+    print('Inside Function Before Append : ',lst,id(lst))
+    lst.append(4)
+    print('Inside Function After Append : ',lst,id(lst))
+
+lst = [1,2,3]
+print('Before Calling Function : ',lst,id(lst))
+val(lst)
+print('After Calling Function : ',lst,id(lst))
