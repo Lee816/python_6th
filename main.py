@@ -714,3 +714,34 @@ def myfuc():
 
 myfuc()
 print('Global Varialble a : ',a)
+
+i=0
+def myfun():
+    i = i + 1 # 오류발생 global 변수와 local 변수의 이름이 같아서 발생
+    print('My Function i :', i)
+
+myfuc()
+
+i=0
+i = i + 1
+def myfun():
+    print('My Function i :', i)
+
+myfuc()
+
+a = 50
+def show():
+    a = 10
+    print('show-A : ',a)
+
+show()
+print('A : ',a)
+
+def show2():
+    global a
+    print('show2-A : ',a)
+    a = 20
+    print('show2-A : ',a)
+
+show2()
+print('A : ',a)
