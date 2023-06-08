@@ -641,3 +641,17 @@ def disp():
 
 r_sh = disp()
 print(r_sh(), type(r_sh))
+
+def pw(x,y):
+    z = x**y
+    print(z)
+
+pw(2,5)
+# pw(5,2,3) # 에러
+
+def show(name, age=20): # 함수인자의 default 값 설정 가능
+    print(f'Name: {name} Age: {age}')
+
+show(name='멋쟁이사자',age=20)
+show(age=20,name='멋쟁이사자')
+show(name='멋쟁이사자')
