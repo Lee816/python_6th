@@ -828,3 +828,54 @@ runner = generate_alphabet('A','F')
 
 for letter in runner:
     print(letter,end=' ')
+
+
+b = (10) # int
+c = (10,) # tuple
+print(b)
+print(c)
+
+d = (10,20,30,40)
+e = (10,20,-50,21.3,'멋쟁이사자')
+f = 10,20,-50,21.3,'멋쟁이사자' # e == f
+print(d,e,f,sep='\n')
+
+print(f[0])
+print(f[1])
+print(f[2])
+print(f[3])
+
+print(f[:3])
+print(f[1:4])
+print(f[3:])
+
+print(c+f)
+print(f * 3)
+print(10 in f)
+print(-10 in f)
+
+h = (10, 20, -50, 21, 20, 10, 15, 20)
+print(min(h),max(h))
+print(h.count(20))
+print(h.index(20))
+sorted_h = sorted(h)
+print(sorted_h)
+a = (10,20,-50)
+x,y,z = a
+print(x,y,z)
+
+# a,b 값 바꾸기
+a=1
+b=2
+print(a,b)
+a,b = b,a
+print(a,b)
+
+list_h = list(h)
+print(list_h,type(list_h))
+
+tuple_h = tuple(h)
+print(tuple_h,type(tuple_h))
+
+nested_tuple = ((1,2,3),(4,5,6),(7,8,9))
+print(nested_tuple)
