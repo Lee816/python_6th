@@ -982,3 +982,13 @@ lst = [1,2,3]
 print('Before Calling Function : ',lst,id(lst))
 val(lst)
 print('After Calling Function : ',lst,id(lst))
+
+def val(x):
+    print('Inside :',x,id(x))
+    x +=1
+    print('Inside After :',x,id(x))
+
+x = 10
+print('Before Calling :',x,id(x))
+val(x)
+print('After Calling :',x,id(x))
