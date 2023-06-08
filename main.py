@@ -745,3 +745,46 @@ def show2():
 
 show2()
 print('A : ',a)
+
+fruits = ['apple','banana','cherry','orange']
+print(fruits)
+
+fruits.append('cherry')
+fruits.append('grape')
+print(fruits)
+
+fruits.insert(2,'kiwi')
+print(fruits)
+
+print(fruits.pop()) # 배열에서 요소를 꺼냄 default 값은 제일 마지막 인덱스
+print(fruits.pop(1))
+print(fruits.index('cherry')) # 제일 작은 하나의 인덱스 값만 반환
+print(fruits)
+
+fruits.remove('cherry') # 인덱스가 제일 작은것 하나만 삭제
+print(fruits)
+
+fruits.reverse()
+print(fruits)
+
+
+fruits = ['apple','banana','cherry','orange']
+vegetables = ['carrot','cucumber']
+
+grocery = fruits + vegetables
+print(grocery)
+
+numbers = [10,5,8,1,7]
+numbers.sort()
+print(numbers)
+
+slice_numbers = numbers[1:4]
+print(slice_numbers)
+
+numbers_copy = numbers.copy()
+numbers_copy.pop()
+print('numbers_copy',numbers_copy)
+print('numbers',numbers)
+
+numbers_clone = numbers[:]
+print(numbers_clone)
