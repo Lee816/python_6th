@@ -1144,3 +1144,20 @@ parent.add_num(7)
 child.add_num(7)
 print(parent)
 print(child)
+
+from datetime import datetime, timedelta, date
+
+td = timedelta(days=10)
+print(td)
+
+d1 = date(year=2023, month=5, day=5)
+d2 = date(year=2023, month=6, day=9)
+
+print(d1 == d2)
+print(d1 < d2)
+print(d1 > d2)
+
+dt = datetime.today()
+
+formetted_datetime = dt.strftime('%B, %d, %Y')
+print(formetted_datetime)
