@@ -1092,3 +1092,19 @@ print(a)
 print(b)
 print(c)
 
+
+import time
+
+print(time.time())
+print(time.ctime())
+
+from datetime import datetime, date
+
+dt = datetime(year=2023, month=5, day=5, hour=10,minute=30)
+print(dt)
+print(type(dt))
+
+current_time = time.ctime() # Fri Jun  9 10:43:00 2023
+current_datetime = datetime.now() # 2023-06-09 10:43:00.788033
+d = date(year=2023,month=6,day=25) # 2023-06-25
+current_date = date.today() # 당일날짜 0000-00-00
