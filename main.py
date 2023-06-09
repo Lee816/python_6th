@@ -1072,3 +1072,23 @@ print(Mobile.fp)
 print(realme.fp)
 print(redme.fp)
 print(geek.fp)
+
+
+class Vector(object):
+    def __init__(self,x,y) -> None: # 인스턴스 내에서 사용하는 변수
+        self.x = x
+        self.y = y
+
+    def __add__(self,other):
+        return Vector(self.x+other.x, self.y+other.y)
+    
+    def __str__(self) -> str:
+        return f'Vector({self.x},{self.y})'
+
+a = Vector(1,2)
+b = Vector(3,4)
+c = a + b
+print(a)
+print(b)
+print(c)
+
