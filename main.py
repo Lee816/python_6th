@@ -1161,3 +1161,11 @@ dt = datetime.today()
 
 formetted_datetime = dt.strftime('%B, %d, %Y')
 print(formetted_datetime)
+
+file_object = open('example.txt','r')
+
+content = file_object.read()
+
+print(content)
+
+file_object.close()
