@@ -1045,3 +1045,30 @@ print('return array y :',y)
 print(type(y))
 for i in y:
     print(i)
+
+
+class Mobile:
+    fp = 'yes'
+
+
+# 생성자 함수
+realme = Mobile()
+redme = Mobile()
+geek = Mobile()
+
+print(Mobile.fp)
+print(realme.fp)
+print(redme.fp)
+print(geek.fp)
+
+Mobile.fp = 'no'
+print(Mobile.fp)
+print(realme.fp)
+print(redme.fp)
+print(geek.fp)
+
+realme.fp = 'Not Working'
+print(Mobile.fp)
+print(realme.fp)
+print(redme.fp)
+print(geek.fp)
