@@ -1108,3 +1108,39 @@ current_time = time.ctime() # Fri Jun  9 10:43:00 2023
 current_datetime = datetime.now() # 2023-06-09 10:43:00.788033
 d = date(year=2023,month=6,day=25) # 2023-06-25
 current_date = date.today() # 당일날짜 0000-00-00
+
+
+class ParentClass:
+    def __init__(self) -> None:
+        self.name = 'parent'
+        self.number = 10
+
+    def __str__(self) -> str:
+        return f'ParentClass name : {self.name}, number : {self.number}'
+    
+    def add_num(self, new_number) -> None:
+        print('부모 : ', new_number, '만큰 더해야지')
+        self.number += new_number
+    
+class ChildClass(ParentClass):
+    def __init__(self) -> None:
+        super().__init__() # 부모의 init을 물려받음
+        self.name = 'child' # name 만 재정의
+
+    def __str__(self) -> str:
+        return f'ChildClass name : {self.name}, number : {self.number}'
+    
+    def add_num(self,new_number) -> None:
+        print('말 안듣는 자식 : 고정적으로 5 더할거다')
+        self.number += 5
+
+parent = ParentClass()
+child = ChildClass()
+print(parent)
+print(child)
+
+print('7 더하기')
+parent.add_num(7)
+child.add_num(7)
+print(parent)
+print(child)
