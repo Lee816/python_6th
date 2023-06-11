@@ -1230,3 +1230,33 @@ for item in content_list:
     file_object.write(item+'\n')
 
 file_object.close()
+
+import os
+
+current_directory = os.getcwd()
+print(current_directory)
+
+os.mkdir('new_directory')
+
+os.makedirs('parent_directory/child_directory/grandchild_directory')
+
+# 경로바꾸기
+os.chdir('new_directory')
+current_directory2 = os.getcwd()
+print(current_directory2)
+
+with open('example.txt','w') as file_object:
+    file_object.write('Hello, World!')
+
+os.rename('new_directory','old_directory')
+
+# 폴더 한개 삭제
+os.rmdir('old_directory')
+
+# 경로상 폴더 전부 삭제
+os.removedirs('parent_directory/child_directory/grandchild_directory')
+
+for dirpath, dirnames, filenames in os.walk('parent_directory'):
+    print(f'디렉토리 경로 : {dirpath}')
+    print(f'내부 디렉토리 이름 : {dirnames}')
+    print(f'파일 이름 : {filenames}')
