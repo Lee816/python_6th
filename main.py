@@ -1470,3 +1470,11 @@ import pprint
 
 pprint.pprint(locals())
 print(locals())
+
+words = ['apple','bat','bar','atom','book']
+by_letters = {}
+
+for word in words:
+    letter = word[0]
+    if letter not in by_letters:
+        by_letters[letter] = [word]
