@@ -1421,3 +1421,21 @@ from MyApp.Handlers.text_handler import handle_text
 
 input_text = "python package practice"
 handle_text(input_text)
+
+
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Error: Division by zero.")
+
+print("Program continues.")
+
+try:
+    number = int("Not a number")
+except ValueError:
+    print("Error : Invalid value")
+
+try:
+    number = 5 + "Not a number"
+except TypeError:
+    print("Error : Invalid type")
