@@ -1464,3 +1464,9 @@ for v in a:
 
 for i ,v in enumerate(a):
     print(i,v)
+
+
+import pprint
+
+pprint.pprint(locals())
+print(locals())
