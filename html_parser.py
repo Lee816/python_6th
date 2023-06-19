@@ -7,7 +7,7 @@ class ImageParser(HTMLParser):
         super().__init__()
         self.result = []
 
-    def handle_starttah(self, tag, attrs):
+    def handle_starttag(self, tag, attrs):
         if tag != "img":
             return
         if not hasattr(self, "result"):
