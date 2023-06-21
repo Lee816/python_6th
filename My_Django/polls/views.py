@@ -26,7 +26,10 @@ def vote(request, question_id):
         return render(
             request,
             "polls/detail.html",
-            {"question": question, "error_message": "항목을 선택하지 않았습니다."},
+            {
+                "question": question,
+                "error_message": "You didn't select a choice.",
+            },
         )
     else:
         selected_choice.votes += 1
@@ -35,4 +38,4 @@ def vote(request, question_id):
 
 
 def results(request, question_id):
-    pass
+    return HttpResponseRedirect(reverse("polls:index"))
