@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
 </head>
-
 <body>
     {% if latest_question_list %}
         <ul>
             {% for question in latest_question_list %}
                 <li>
-                    <a href="{% url 'polls:detail' question.id %}" style='text-decoration:none; color:inherit;'>{{ question.question_text}}</a> | {{ question.pub_date}}
+                    <a href="{% url 'polls:detail' question.id %}" style='text-decoration:none; color: inherit;'>{{ question.question_text }}</a>
                 </li>
             {% endfor %}
         </ul>
     {% else %}
-        <h1> 투표가 없습니다. </h1>
+        <p>투표가 없습니다.</p>
     {% endif %}
 </body>
-
 </html>
