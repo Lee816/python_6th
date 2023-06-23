@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+<title>{% block title %}Books Application Site{% endblock title %}</title>
+
+{% block nav %}
+    {{ block.super }} {# 부모 요소를 그대로 가져옴 #}
+    {% comment %} <a href="/books">Books</a> {% endcomment %}
+{% endblock nav %}
