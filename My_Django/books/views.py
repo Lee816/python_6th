@@ -28,4 +28,4 @@ class PublisherList(ListView):
 
 
 class BookDetailView(DetailView):
-    pass
+    model = Book
