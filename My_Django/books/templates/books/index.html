@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Books{% endblock title %}
+
+{% block contents %}
+<h1>Book Management System</h1>
+<ul>
+    {% for modelname in model_list %}
+        {% with "books:"|add:modelname|lower|add:"_list" as url_var %}
+        <!--    books:book_list books:author_list books:publisher -->
+        <li><a href="{% url url_var %}" style='text-decoration:none; color:inherit; '>{{ modelname }}</a></li>
+        <hr>
+        {% endwith %}
+    {% endfor %}
+</ul>
+{% endblock %}

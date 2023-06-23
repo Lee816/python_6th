@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}Detail{% endblock title %}
+
+{% block contents %}
     <form action="{% url 'polls:vote' question.id %}" method="post">
         {% csrf_token %}
         <fieldset>
@@ -21,7 +18,7 @@
                 <br>
             {% endfor %}
         </fieldset>
-        <input type="submit" value="Vote">
+        <input type="submit" value="Vote"> | 
+        <a href="{% url 'polls:index' %}" style='text-decoration:none; color: inherit;'>Home</a>
     </form>
-</body>
-</html>
+{% endblock contents %}
