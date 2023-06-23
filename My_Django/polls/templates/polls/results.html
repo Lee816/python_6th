@@ -13,6 +13,6 @@
         {% endfor %}
     </ul>
 
-    <a href="{% url 'polls:detail' question.id %}" style='text-decoration:none; color: inherit;'>Vote again?</a> | 
-    <a href="{% url 'polls:index' %}" style='text-decoration:none; color: inherit;'>Home</a>
+    <a href="{% url 'polls:detail' question.id %}">Vote again?</a> | 
+    <a href="{% url 'polls:index' %}">Home</a>
 {% endblock contents %}

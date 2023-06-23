@@ -3,12 +3,12 @@
 {% block title %}Books{% endblock title %}
 
 {% block contents %}
-<h1>Book Management System</h1>
+<h2>Book Management System</h2>
 <ul>
     {% for modelname in model_list %}
         {% with "books:"|add:modelname|lower|add:"_list" as url_var %}
         <!--    books:book_list books:author_list books:publisher -->
-        <li><a href="{% url url_var %}" style='text-decoration:none; color:inherit; '>{{ modelname }}</a></li>
+        <li><a href="{% url url_var %}">{{ modelname }}</a></li>
         <hr>
         {% endwith %}
     {% endfor %}

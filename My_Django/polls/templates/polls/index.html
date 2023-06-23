@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 {% block title %}Index{% endblock title %}
 {% block contents %}
+    <h2>Polls List</h2>
     {% if latest_question_list %}
         <ul>
             {% for question in latest_question_list %}
                 <li>
-                    <a href="{% url 'polls:detail' question.id %}" style='text-decoration:none; color: inherit;'>{{ question.question_text }}</a>
+                    <a href="{% url 'polls:detail' question.id %}" >{{ question.question_text }}</a>
                     <hr>
                 </li>{# 템플릿 변수 주석 #}
             {% endfor %}
