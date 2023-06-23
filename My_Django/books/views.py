@@ -29,3 +29,11 @@ class PublisherList(ListView):
 
 class BookDetailView(DetailView):
     model = Book
+
+
+class AuthorDetailView(DetailView):
+    model = Author
+
+
+class PublisherDetailView(DetailView):
+    model = Publisher

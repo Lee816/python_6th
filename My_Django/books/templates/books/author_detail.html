@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Author{% endblock title %}
+
+{% block contents %}
+    <h2>{{ object.name }}</h2>
+    <ul>
+        <li>
+            Salutation : {{ object.salutation }}
+        </li>
+        <li>
+            Email : {{ object.email }}
+        </li>
+    </ul>
+{% endblock contents %}
